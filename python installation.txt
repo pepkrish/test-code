@@ -1,0 +1,32 @@
+webpage
+http://docs.pylonsproject.org/projects/pyramid/en/1.4-branch/narr/install.html
+
+python download path
+https://www.python.org/downloads/windows/
+pywin32
+https://sourceforge.net/projects/pywin32/files/
+https://sourceforge.net/projects/pywin32/files/pywin32/Build%20221/pywin32-221.win32-py2.7.exe/download
+
+Windows Using Python 2
+
+Install, or find Python 2.7 for your system.
+
+Install the Python for Windows extensions. Make sure to pick the right download for Python 2.7 and install it using the same Python installation from the previous step.
+
+Install latest setuptools distribution into the Python you obtained/installed/found in the step above: download ez_setup.py and run it using the python interpreter of your Python 2.7 installation using a command prompt:
+
+c:\> c:\Python27\python ez_setup.py
+Use that Python’s bin/easy_install to install virtualenv:
+
+c:\> c:\Python27\Scripts\easy_install virtualenv
+Use that Python’s virtualenv to make a workspace:
+
+c:\> c:\Python27\Scripts\virtualenv --no-site-packages env
+Switch to the env directory:
+
+c:\> cd env
+(Optional) Consider using Scripts\activate.bat to make your shell environment wired to use the virtualenv.
+
+Use easy_install to get Pyramid and its direct dependencies installed:
+
+c:\env> Scripts\easy_install "pyramid==1.4.9"
